@@ -13,3 +13,8 @@ Use of any further dependencies besides React, Firebase and create-react-app is 
 6. The provided data structure contains a list of users and accounts. Each user has an account and each account can contain one or more apps. In your react app, get the users from Firebase and for each user get the appropriate account.
 7. Render a list of users, displaying the account id and app titles belonging to each user.
 8. When done, send us a link to your git repo!
+
+## Bonus
+Complete this section for extra credit
+
+1. Add a rating system to the apps that allows you to rate it out of 5 (should save to db)
