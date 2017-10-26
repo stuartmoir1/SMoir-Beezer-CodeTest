@@ -33,7 +33,7 @@ class App extends Component {
 
     return (
       <div className='app'>
-        <header classname='app-header'>
+        <header className='app-header'>
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
