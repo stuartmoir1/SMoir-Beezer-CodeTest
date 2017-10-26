@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Table from './components/Table'
 import fire from './other/firebase.js'
+import logo from './images/beezer_logo.png'
 import {dashboardData} from './other/database_data.js'
 
 import './App.css';
@@ -31,6 +32,9 @@ class App extends Component {
 
     return (
       <div>
+        <header classname='app-header'>
+          <img src={logo} className="app-logo" alt="logo" />
+        </header>
         <Table data={data} />
       </div>
     );
