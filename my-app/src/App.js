@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Table from './components/Table'
-import fire from './firebase.js'
-import {dashboardData} from './functions.js'
+import fire from './other/firebase.js'
+import {dashboardData} from './other/database_data.js'
 
 import './App.css';
 
