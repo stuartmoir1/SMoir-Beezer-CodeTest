@@ -4,7 +4,6 @@ class AppDetails extends Component{
 
   render(){
     //console.log('AppDetails, render...')
-    //console.log(this.props.details)
     const details = this.props.details
     const title = (Object.keys(details)).toString()
     const rating = details[(Object.keys(details)).toString()]

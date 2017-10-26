@@ -6,7 +6,6 @@ class TableRow extends Component{
   render(){
     //console.log('TableRow, render...')
     const row = this.props.row
-    console.log(row.appDetails)
     return(
       <tbody>
         <tr>
@@ -15,7 +14,6 @@ class TableRow extends Component{
           <td key={row.accId}>{row.accId}</td>
           <td>
             {row.appDetails.map(details =>{
-              console.log(details)
               return (
                 <AppDetails key={(Object.keys(details)).toString()} details={details} />
               )
