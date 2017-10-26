@@ -29,7 +29,6 @@ class App extends Component {
   render() {
     //console.log(this.state.data)
     const data = dashboardData(this.state.data)
-    //console.log('data:', data)
 
     return (
       <div className='app'>
