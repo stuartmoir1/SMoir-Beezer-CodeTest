@@ -27,32 +27,7 @@ class App extends Component {
   render() {
     //console.log(this.state.data)
     const data = dashboardData(this.state.data)
-    console.log('data:', data)
-
-    const seed =[{
-      userId: "00L91c7cvUaghNmGlC0lJa9eZ102",
-      userName: "Randle McMurphy",
-      accId: "-Kd_teAAXcw2b5MyFPIT",
-      appDetails: [
-        {"One Flew Over The Cuckoo’s Nest": 4}
-      ]
-    }, {
-      userId: "0YRaZC6EUrc5sc8Ab4AR7Zp7ig93",
-      userName: "Norman Bates",
-      accId: "-Kd_ZCjRYSGzISxY_5Wi",
-      appDetails: [
-        {"Psycho": 5}
-      ]
-    }, {
-      userId: "11yVrZ6TK3ZuKpITF8UVGF4ILlC3",
-      userName: "Wednesday Addams",
-      accId: "-Kda3ClE2i0vZzyh7uh0",
-      appDetails: [
-        {"The Addams Family": 2},
-        {"Addams Family Values": 3},
-        {"Addams Family Reunion": 4}
-      ]
-    }]
+    //console.log('data:', data)
 
     return (
       <div>
