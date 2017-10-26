@@ -11,7 +11,7 @@ class Table extends Component{
         <th>User ID</th>
         <th>User Name</th>
         <th>Acc ID</th>
-        <th>App Details</th>
+        <th>App Details (title; rating)</th>
         {data.map(row => {
           return (
             <TableRow key={row.id} row={row} />
