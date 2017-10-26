@@ -56,7 +56,7 @@ class App extends Component {
 
     return (
       <div>
-        <Table data={seed} />
+        <Table data={data} />
       </div>
     );
   }
