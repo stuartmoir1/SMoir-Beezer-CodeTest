@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Container from './containers/Container'
-
+import Table from './Table'
 import fire from './firebase.js'
-import logo from './logo.svg';
+import {dashboardData} from './functions.js'
 
 import './App.css';
 
@@ -15,7 +14,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){ 
+  componentDidMount(){
    const data = fire.database().ref('/')
     data.on('value', (snapshot) => {
       const data = snapshot.val()
@@ -27,19 +26,51 @@ class App extends Component {
 
   render() {
     //console.log(this.state.data)
+    const data = dashboardData(this.state.data)
+    console.log('data:', data)
+
+    const seed =[{
+      userId: "00L91c7cvUaghNmGlC0lJa9eZ102",
+      userName: "Randle McMurphy",
+      accId: "-Kd_teAAXcw2b5MyFPIT",
+      appDetails: [
+        {"One Flew Over The Cuckoo’s Nest": 4}
+      ]
+    }, {
+      userId: "0YRaZC6EUrc5sc8Ab4AR7Zp7ig93",
+      userName: "Norman Bates",
+      accId: "-Kd_ZCjRYSGzISxY_5Wi",
+      appDetails: [
+        {"Psycho": 5}
+      ]
+    }, {
+      userId: "11yVrZ6TK3ZuKpITF8UVGF4ILlC3",
+      userName: "Wednesday Addams",
+      accId: "-Kda3ClE2i0vZzyh7uh0",
+      appDetails: [
+        {"The Addams Family": 2},
+        {"Addams Family Values": 3},
+        {"Addams Family Reunion": 4}
+      ]
+    }]
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Container data={this.state.data} /> 
+      <div>
+        <Table data={seed} />
       </div>
     );
   }
 }
 
 export default App;
+
+//if (data.length !== 0){
+//  console.log('userID:', data[6]['userId'])
+//  console.log('userName:', data[6]['userName'])
+//  console.log('accID:', data[6]['accId'])
+//  console.log('account details:', data[6]['appDetails'])
+//
+//  const key = Object.keys(data[6]['appDetails'][0])
+//  console.log('title:', key.toString())
+//  console.log('rating:', data[6]['appDetails'][0][key])
+//}
