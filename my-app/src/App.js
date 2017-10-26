@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Table from './components/Table'
+
 import fire from './other/firebase.js'
-import logo from './images/beezer_logo.png'
 import {dashboardData} from './other/database_data.js'
 
-import './App.css';
+import './style/App.css'
+import logo from './images/beezer_logo.png'
 
 class App extends Component {
 
@@ -31,9 +32,10 @@ class App extends Component {
     //console.log('data:', data)
 
     return (
-      <div>
+      <div className='app'>
         <header classname='app-header'>
           <img src={logo} className="app-logo" alt="logo" />
+          <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
         <Table data={data} />
       </div>
