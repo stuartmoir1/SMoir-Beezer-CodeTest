@@ -6,6 +6,9 @@ class TableRow extends Component{
   render(){
     //console.log('TableRow, render...')
     const row = this.props.row
+
+    // Put map here and pass into return as a {variable}
+
     return(
       <tbody>
         <tr>
