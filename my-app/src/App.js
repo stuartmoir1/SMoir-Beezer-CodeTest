@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-   const data = fire.database().ref('/')
+    const data = fire.database().ref('/')
     data.on('value', (snapshot) => {
       const data = snapshot.val()
       this.setState({
@@ -29,6 +29,7 @@ class App extends Component {
   render() {
     //console.log(this.state.data)
     const data = dashboardData(this.state.data)
+    console.log(data)
 
     return (
       <div className='app'>
@@ -36,7 +37,7 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
-        <Table data={data} />
+        <Table className='table' data={data} />
       </div>
     );
   }

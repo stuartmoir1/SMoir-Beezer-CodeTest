@@ -14,7 +14,7 @@ class Table extends Component{
         <th>App Details (title; rating)</th>
         {data.map(row => {
           return (
-            <TableRow key={row.userId} row={row} />
+            <TableRow classname='table-row' key={row.userId} row={row} />
           ) 
         })}
       </table>

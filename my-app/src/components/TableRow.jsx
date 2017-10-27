@@ -15,7 +15,7 @@ class TableRow extends Component{
           <td>
             {row.appDetails.map(details =>{
               return (
-                <AppDetails key={(Object.keys(details)).toString()} details={details} />
+                <AppDetails classname='app-details' key={(Object.keys(details)).toString()} details={details} />
               )
             })}
           </td>
