@@ -29,7 +29,8 @@ class App extends Component {
   render() {
     //console.log(this.state.data)
     const data = dashboardData(this.state.data)
-    console.log(data)
+    //console.log(data)
+    if (data.length === 0) { return null } // Smooths table rendering.
 
     return (
       <div className='app'>
