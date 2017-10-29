@@ -3,8 +3,7 @@ import TableRow from './TableRow'
 
 function Table(props){
   //console.log('Table, render...')
-  const data = props.data
-  const rows = data.map(row => {
+  const rows = props.data.map(row => {
     return (
       <TableRow id='app-table-row' key={row.userId} row={row} />
     )
