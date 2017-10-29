@@ -1,10 +1,10 @@
-
+import React from 'react'
 import AppDetails from './AppDetails'
 
 function TableRow(props){
   //console.log('TableRow...')
   const row = props.row
-  let details = row.appDetails.map(details => {
+  const details = row.appDetails.map(details => {
     return (
       <AppDetails id='app-details' key={(Object.keys(details)).toString()} details={details} />
     )

@@ -37,7 +37,7 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
-        <Table className='app-table' data={data} />
+        <Table id='app-table' data={data} />
       </div>
     );
   }

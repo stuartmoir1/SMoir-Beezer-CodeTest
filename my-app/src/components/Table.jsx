@@ -1,25 +1,23 @@
-import React, {Component} from 'react'
+import React from 'react'
 import TableRow from './TableRow'
 
-class Table extends Component{
-
-  render(){
-    //console.log('Table, render...')
-    const data = this.props.data
+function Table(props){
+  //console.log('Table, render...')
+  const data = props.data
+  const rows = data.map(row => {
     return (
-      <table>
-        <th>User ID</th>
-        <th>User Name</th>
-        <th>Acc ID</th>
-        <th>App Details (title; rating)</th>
-        {data.map(row => {
-          return (
-            <TableRow classname='app-table-row' key={row.userId} row={row} />
-          ) 
-        })}
-      </table>
+      <TableRow id='app-table-row' key={row.userId} row={row} />
     )
-  }
+  })
+  return (
+    <table>
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>Acc ID</th>
+      <th>App Details (title; rating)</th>
+      {rows}
+    </table>
+  )
 }
 
 export default Table
