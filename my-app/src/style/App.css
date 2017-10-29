@@ -32,4 +32,21 @@ th {
   height: 30px;
 }
 
-tr:nth-child(even){background-color: lightgrey}
+/* tr:nth-child(even){background-color: lightgrey} */
+
+.app-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.app-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.app-rating > span:hover:before,
+.app-rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
