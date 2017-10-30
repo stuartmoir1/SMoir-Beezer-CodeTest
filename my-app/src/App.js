@@ -17,6 +17,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+    console.log('componentDidMount...')
     const data = fire.database().ref('/')
     data.on('value', (snapshot) => {
       const data = snapshot.val()
@@ -26,10 +27,15 @@ class App extends Component {
     })
   }
 
+  handleOnClick(starId){
+    console.log('handleOnClick...')
+    console.log(starId)
+  }
+
   render() {
     //console.log(this.state.data)
     const data = dashboardData(this.state.data)
-    //console.log(data)
+    console.log(data)
     if (data.length === 0) { return null } // Smooths table rendering.
 
     return (
@@ -38,7 +44,7 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
-        <Table id='app-table' data={data} />
+        <Table id='app-table' data={data} onClick={(starId) => this.handleOnClick(starId)}/>
       </div>
     );
   }

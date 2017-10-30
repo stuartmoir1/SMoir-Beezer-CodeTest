@@ -34,7 +34,7 @@ th {
 
 /* tr:nth-child(even){background-color: lightgrey} */
 
-.app-rating {
+/*.app-rating {
   unicode-bidi: bidi-override;
   direction: rtl;
 }
@@ -49,4 +49,4 @@ th {
 .app-rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
-}
+} */

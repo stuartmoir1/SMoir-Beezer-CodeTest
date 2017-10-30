@@ -13,7 +13,8 @@ function Table(props){
       <th>User ID</th>
       <th>User Name</th>
       <th>Acc ID</th>
-      <th>App Details (title; rating)</th>
+      <th>Title</th>
+      <th>Rating</th>
       {rows}
     </table>
   )

@@ -1,23 +1,29 @@
 import React from 'react'
-import AppDetails from './AppDetails'
+import Rating from './Rating'
+import Title from './Title'
 
 function TableRow(props){
   //console.log('TableRow...')
   const row = props.row
-  const details = row.appDetails.map(details => {
+  const titles = row.appDetails.map(details => {
     return (
-      <AppDetails id='app-details' key={(Object.keys(details)).toString()} details={details} />
+      <Title id='app-title' key={(Object.keys(details)).toString()} details={details} />
     )
   })
+  const rating = row.appDetails.map(details => {
+    return (
+      <Rating id='app-rating' key={details[(Object.keys(details)).toString()]} details={details} />
+    )
+  })
+
   return(
     <tbody>
       <tr>
         <td key={row.userId}>{row.userId}</td>
         <td key={row.userName}>{row.userName}</td>
         <td key={row.accId}>{row.accId}</td>
-        <td>
-          {details}
-        </td>
+        <td>{titles}</td>
+        <td>{rating}</td>
       </tr>
     </tbody>
   )
