@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    //console.log('componentDidMount...')
+    //console.log('App, componentDidMount...')
     const data = fire.database().ref('/')
     data.on('value', (snapshot) => {
       const data = snapshot.val()
@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   handleOnClickRatingStar(rating, title, accId){
-    //console.log('handleOnClick...')
+    //console.log('App, handleOnClick...')
     let data = this.state.data
     const apps = data['accounts'][accId]['apps']
     
@@ -41,13 +41,19 @@ class App extends Component {
       }
     })
 
+    // Write updated rating to database.
+    fire.database().ref('/').set({
+      accounts: data['accounts'],
+      users: data['users']
+    })
+
     this.setState({
       data: data
     })
   }
 
   render() {
-    //console.log(this.state.data)
+    //console.log('App, render...')
     const data = dashboardData(this.state.data)
     if (data.length === 0) { return null } // Smooths table rendering.
 

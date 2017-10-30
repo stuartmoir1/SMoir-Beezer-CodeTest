@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Title(props){
+  //console.log('Title...')
   const details = props.details
   const title = (Object.keys(details)).toString()
   return (

@@ -1,7 +1,5 @@
 const dashboardData = (data) => {
-
   //console.log('dashboardData...')
-
   const users = data['users']
   const accs = data['accounts']
   let dashboard = []

@@ -1,5 +1,5 @@
 import firebase from 'firebase'
-
+//console.log('firebase...')
 var config = {
   apiKey: "AIzaSyAI2JNsY61r7v2Z9xh2EJqnSUHL7cFAi2s",
   authDomain: "smoir-beezer-code-test.firebaseapp.com",

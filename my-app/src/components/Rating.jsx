@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Rating(props){
-  //console.log('AppDetails...')
+  //console.log('Rating...')
   const details = props.details
   const rating = details[(Object.keys(details)).toString()]
   const title = (Object.keys(details)).toString()
