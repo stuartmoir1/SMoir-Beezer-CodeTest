@@ -5,7 +5,6 @@ const dashboardData = (data) => {
   const accs = data['accounts']
   let dashboard = []
 
-  // Create dashboard data.
   for (let user in users){
 
     const userId = user
