@@ -10,11 +10,15 @@ function Table(props){
   })
   return (
     <table>
-      <th>User ID</th>
-      <th>User Name</th>
-      <th>Acc ID</th>
-      <th>Title</th>
-      <th>Rating</th>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>User Name</th>
+          <th>Acc ID</th>
+          <th>Title</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
       {rows}
     </table>
   )
