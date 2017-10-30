@@ -14,7 +14,7 @@ function Table(props){
         <tr>
           <th>User ID</th>
           <th>User Name</th>
-          <th>Acc ID</th>
+          <th>Account ID</th>
           <th>Title</th>
           <th>Rating</th>
         </tr>
