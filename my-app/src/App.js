@@ -54,7 +54,7 @@ class App extends Component {
 
   render() {
     //console.log('App, render...')
-    const data = dashboardData(this.state.data) // Manipulate dashboard data.
+    const data = dashboardData(this.state.data) // Manipulates d/board data.
     if (data.length === 0) { return null } // Smooths table rendering.
 
     return (
