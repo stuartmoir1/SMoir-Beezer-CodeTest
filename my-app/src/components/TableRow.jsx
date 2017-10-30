@@ -12,7 +12,7 @@ function TableRow(props){
   })
   const rating = row.appDetails.map(details => {
     return (
-      <Rating id='app-rating' key={(Object.keys(details)).toString()} details={details} />
+      <Rating id='app-rating' key={(Object.keys(details)).toString()} details={details} onClick={props.onClick} />
     )
   })
 
