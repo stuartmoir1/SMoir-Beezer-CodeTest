@@ -27,9 +27,23 @@ class App extends Component {
     })
   }
 
-  handleOnClick(rating, title){
-    console.log('handleOnClick...')
-    console.log(rating, title)
+  handleOnClickRatingStar(rating, title, accId){
+    //console.log('handleOnClick...')
+    let data = this.state.data
+    const apps = data['accounts'][accId]['apps']
+    
+    // Update rating.
+    Object.keys(apps).forEach((app) => {
+      const path = data['accounts'][accId]['apps'][app]
+      if (path['title'] === title){
+        path['rating'] = rating
+        return
+      }
+    })
+
+    this.setState({
+      data: data
+    })
   }
 
   render() {
@@ -43,7 +57,7 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
-        <Table id='app-table' data={data} onClick={(rating, title) => this.handleOnClick(rating, title)}/>
+        <Table id='app-table' data={data} onClick={(rating, title, accId) => this.handleOnClickRatingStar(rating, title, accId)}/>
       </div>
     );
   }

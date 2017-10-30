@@ -10,9 +10,9 @@ function TableRow(props){
       <Title id='app-title' key={(Object.keys(details)).toString()} details={details} />
     )
   })
-  const rating = row.appDetails.map(details => {
+  const ratings = row.appDetails.map(details => {
     return (
-      <Rating id='app-rating' key={(Object.keys(details)).toString()} details={details} onClick={props.onClick} />
+      <Rating id='app-rating' key={(Object.keys(details)).toString()} details={details} onClick={props.onClick} accId={row.accId}/>
     )
   })
 
@@ -23,7 +23,7 @@ function TableRow(props){
         <td key={row.userName}>{row.userName}</td>
         <td key={row.accId}>{row.accId}</td>
         <td>{titles}</td>
-        <td>{rating}</td>
+        <td>{ratings}</td>
       </tr>
     </tbody>
   )
