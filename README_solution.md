@@ -7,7 +7,7 @@
 
 The solution is hosted on Firebase at https://smoir-beezer-code-test.firebaseapp.com/
 
-## Compelted extensions
+## Completed extensions
 
 1. One or more apps/ films associated with each account ID.
 2. 5-star rating system applied per app/ film.
