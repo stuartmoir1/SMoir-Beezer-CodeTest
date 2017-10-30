@@ -5,7 +5,7 @@ function Table(props){
   //console.log('Table...')
   const rows = props.data.map(row => {
     return (
-      <TableRow id='app-table-row' key={row.userId} row={row} onClick={props.onClick}/>
+      <TableRow className='app-table-row' key={row.userId} row={row} onClick={props.onClick}/>
     )
   })
   return (

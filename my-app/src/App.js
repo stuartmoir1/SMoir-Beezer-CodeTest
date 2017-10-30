@@ -54,6 +54,7 @@ class App extends Component {
 
   render() {
     //console.log('App, render...')
+    // Manipulate data for display.
     const data = dashboardData(this.state.data)
     if (data.length === 0) { return null } // Smooths table rendering.
 
@@ -63,7 +64,7 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className='app-title'>Beezer Dashboard</h1>
         </header>
-        <Table id='app-table' data={data} onClick={(rating, title, accId) => this.handleOnClickRatingStar(rating, title, accId)}/>
+        <Table className='app-table' data={data} onClick={(rating, title, accId) => this.handleOnClickRatingStar(rating, title, accId)}/>
       </div>
     );
   }

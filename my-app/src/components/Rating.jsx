@@ -2,10 +2,11 @@ import React from 'react'
 
 function Rating(props){
   //console.log('Rating...')
+  const accId = props.accId
   const details = props.details
   const rating = details[(Object.keys(details)).toString()]
   const title = (Object.keys(details)).toString()
-  const accId = props.accId
+
   let star1, star2, star3, star4, star5
   
   switch(rating){
